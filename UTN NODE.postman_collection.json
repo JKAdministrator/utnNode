@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "54c83363-8d57-48bc-9626-dbef88c78961",
+		"name": "UTN NODE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9250646"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDg2OTU3LCJleHAiOjE3Mjg0OTA1NTd9.5VBETevW7q6PipCbV8mGuXaP4NEcIO8AHCjZGfUiRPo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDg2NzgxLCJleHAiOjE3Mjg0OTAzODF9.SWRhVyqj8HECNyb-7w5wFCTXh-_hOK3R5-5Mtfva3zA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDkwNjY3LCJleHAiOjE3Mjg0OTQyNjd9.ZvkVnyJSoTg_Cuf65KeNSTq2lDPcejzrAJiNrCfRPNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"nombre\": \"Smart TV 55'' 4K VisionMaster\",\r\n    \"precio\": 1000,\r\n    \"categoria\": \"Electrónica\",\r\n    \"detalle\": \"Televisor inteligente de 55 pulgadas con resolución 4K.\",\r\n    \"stock\": 12\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDg2OTU3LCJleHAiOjE3Mjg0OTA1NTd9.5VBETevW7q6PipCbV8mGuXaP4NEcIO8AHCjZGfUiRPo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"fullName\": \"Usuario 4\",\r\n    \"email\": \"usuario4@bpba.com.ar\",\r\n    \"password\": \"1234\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"email\": \"usuario4@bpba.com.ar\",\r\n    \"password\": \"1234\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDkwNjY3LCJleHAiOjE3Mjg0OTQyNjd9.ZvkVnyJSoTg_Cuf65KeNSTq2lDPcejzrAJiNrCfRPNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n\"nombre\": \"Cámara DSLR ProShot 9999\",\r\n            \"precio\": 800,\r\n            \"categoria\": \"Fotografía\",\r\n            \"detalle\": \"Cámara DSLR con 24MP y grabación en 4K.\",\r\n            \"stock\": 15\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/productos/6706ad94c98d340d42d704c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"productos",
+						"6706ad94c98d340d42d704c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzdWFyaW8gNCIsInVzZXJFbWFpbCI6InVzdWFyaW80QGJwYmEuY29tLmFyIiwic3ViIjoiNjZmZWZkYTFhNzA0NDA0MThlOWZjNDFkIiwiaWF0IjoxNzI4NDkwNjY3LCJleHAiOjE3Mjg0OTQyNjd9.ZvkVnyJSoTg_Cuf65KeNSTq2lDPcejzrAJiNrCfRPNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Inception\",\r\n    \"year\": 2010,\r\n    \"director\": \"Christopher Nolan\",\r\n    \"duration\": 148,\r\n    \"poster\": \"https://example.com/posters/inception.jpg\",\r\n    \"genre\": [\"Action\", \"Adventure\", \"Sci-Fi\"],\r\n    \"rate\": 8.8\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/productos/6706ad66ecec6e23db098c05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"productos",
+						"6706ad66ecec6e23db098c05"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
